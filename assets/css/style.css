@@ -11,7 +11,7 @@ body{
 .card{
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg ,#67ecc9 , #4d8f3c);
+    background: linear-gradient(135deg ,#00ffbb , #11646a);
     text-align: center;
     border-radius:15px ;
     margin: 200px auto;
@@ -30,7 +30,6 @@ body{
     padding: 20px;
     border-radius: 15px;
     input{
-        margin-left: 20px   ;
         background-color: white;
         padding: 22px 25px;
         border-radius: 35px;
@@ -41,14 +40,17 @@ body{
         background-color: #ebffce;
         border: none;
         outline: none;
-        padding: 22px;
+        width: 60px;
+        height: 60px;
         text-align: center;
         border-radius: 50px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
 
     }
     img{
         width: 16px;
-
     }
 }
 
@@ -65,38 +67,103 @@ body{
     text-align: left;
     gap: 10px;
 
+    p{
+        font-weight: 600;
+        margin: 0px 10px;
+        white-space: nowrap;
+    }
     img{
         width: 40px;
         margin-left:20px ;
     }
 }
-/* HTML: <div class="loader"></div> */
-.loader {    
-  --r1: 154%;
-  --r2: 68.5%;
-  width: 60px;
-  aspect-ratio: 1;
-  border-radius: 50%; 
-  background:
-    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
-    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
-    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
-    #ccc;
-  background-size: 50.5% 220%;
-  background-position: -100% 0%,0% 0%,100% 0%;
-  background-repeat:no-repeat;
-  animation: l9 2s infinite linear;
-}
-@keyframes l9 {
-    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
-    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
-    100% {background-position:    0% 100%,100% 100%,200% 100%}
-}
 
 .weather{
     display: none;
+    h1{
+        font-size: 30px;
+        margin: 10px auto;
+    }
 }
 
 .error{
     display: none;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 10px 20px; 
+        margin: 100px auto; 
+    }
+
+    .search {
+        padding: 10px; 
+    }
+
+    .search input {
+        padding: 15px 20px; 
+        font-size: 14px; 
+    }
+
+    .search button {
+        width: 50px; 
+        height: 50px;
+    }
+
+    .weather-icon {
+        width: 150px; 
+    }
+
+    .details {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .col img {
+        width: 30px; 
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px 15px;
+    }
+
+    .search input {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .search button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search img {
+        width: 12px; 
+    }
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #555;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+.copy{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: auto;
 }
