@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+}
+.card{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg ,#67ecc9 , #4d8f3c);
+    text-align: center;
+    border-radius:15px ;
+    margin: 200px auto;
+    padding: 10px 50px;
+    color: #fff;
+}
+.weather-icon{
+    width: 210px;
+}
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    border-radius: 15px;
+    input{
+        margin-left: 20px   ;
+        background-color: white;
+        padding: 22px 25px;
+        border-radius: 35px;
+        border: none;
+        outline: none;
+    }
+    button{
+        background-color: #ebffce;
+        border: none;
+        outline: none;
+        padding: 22px;
+        text-align: center;
+        border-radius: 50px;
+
+    }
+    img{
+        width: 16px;
+
+    }
+}
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0px 20px;
+}
+.col{
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 10px;
+
+    img{
+        width: 40px;
+        margin-left:20px ;
+    }
+}
+/* HTML: <div class="loader"></div> */
+.loader {    
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%; 
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#269af2 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#269af2 80%),
+    #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+.weather{
+    display: none;
+}
+
+.error{
+    display: none;
+}
