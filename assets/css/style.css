@@ -123,6 +123,11 @@ body{
         width: 30px; 
         margin-left: 10px;
     }
+
+    .copy {
+        font-size: 13px;
+        margin: 15px 0px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -142,6 +147,11 @@ body{
 
     .search img {
         width: 12px; 
+    }
+
+    .copy {
+        font-size: 11px;
+        margin: 10px 0px;
     }
 }
 .loader {
